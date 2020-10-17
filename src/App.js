@@ -27,6 +27,26 @@ class App extends Component {
             }
         ]
     }
+
+    //라이프사이클 함수 선언  -> 일련의 탄생부터 죽음까지의 생명주기
+    // Render: componentWillMount() -> render() -> componentDidMount()
+    // Update componentWillReceiveProps() -> shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+    componentDidMount() {
+        //시간이 어느정도 지나면!
+        setTimeout(() => {
+            //setState는 state를 갱신한다.
+            this.setState({
+                movies: [
+                    {
+                        title: "Trainspotting",
+                        poster: "https://resizing.flixster.com/OUEArjor-MbyCV6GqLU85Hk9jQI=/300x300/v1.bjs1NTQ3OTM7ajsxNzQ2NjsxMjAwOzIwMDA7MTMzMQ"
+                    },
+                    ...this.state.movies // ...은 배열에만 사용가능. 값을 가져오기
+                ]
+            })
+        }, 3000)
+    }
+
     render() {
         const {movies, greeting} = this.state //비구조 할당
 
