@@ -1,0 +1,7 @@
+.poster {
+    border-radius: 80%;
+}
+
+.poster:hover{
+    opacity: 0.5;
+}

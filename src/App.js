@@ -12,7 +12,7 @@ class App extends Component {
     renderMovie = () => {
         const movieOut = this.state.movies.map(movie => {
             return (
-                <Movie title={movie.title} poster={movie.poster} date={movie.date}/>
+                <Movie title={movie.title} poster={movie.poster} />
             )
         })
         return movieOut

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import './MoviePost.css'
 
 const MoviePost = (props) => {
     return (
-        <img src={props.img} alt="movie image"/>
+        <img className="poster" src={props.img} alt="movie image"/>
     );
 };
 

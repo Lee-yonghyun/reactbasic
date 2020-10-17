@@ -1,15 +1,15 @@
 import React from 'react';
 import MoviePost from "./MoviePost";
 import PropTypes from 'prop-types'
+import './Movie.css'
 
 
 //Componet는 무조건 대문자 시작!
 const Movie = (props) => {
     return (
-        <div>
-            <h1>{props.title}</h1>
+        <div className="container">
+            <h1 className="title">{props.title}</h1>
             <MoviePost img={props.poster} />
-            <h1>{props.date}</h1>
         </div>
     );
 };
